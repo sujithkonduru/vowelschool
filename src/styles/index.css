@@ -1,0 +1,39 @@
+/* Fonts are linked from index.html so they are discovered before the bundle. */
+@import './tokens.css';
+@import './base.css';
+@import './components.css';
+@import './pages.css';
+@import './responsive.css';
+
+/* Reserve the scrollbar so locking the lightbox does not shift the page. */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* ------------------------------------------------------------------
+   Reduced motion. The JavaScript layer collapses transforms through
+   useReducedMotion; this covers CSS transitions and hover effects.
+   ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .gallery-tile:hover .gallery-media img,
+  .campus-tile a:hover img,
+  .calendar-card:hover .calendar-page img,
+  .action:hover,
+  .contact-card:hover,
+  .back-to-top:hover {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero artwork preview</title>
+    <link rel="stylesheet" href="../../src/styles/tokens.css" />
+    <link rel="stylesheet" href="../../src/styles/base.css" />
+    <link rel="stylesheet" href="../../src/styles/components.css" />
+    <link rel="stylesheet" href="../../src/styles/pages.css" />
+    <link rel="stylesheet" href="../../src/styles/responsive.css" />
+    <style>
+      body {
+        margin: 0;
+      }
+      /* Mirror what Home.jsx sets on .hero-bg via inline custom properties. */
+      .hero-bg {
+        --hero-src: url('../../public/images/hero/vowel-school-arrival.jpg');
+        --hero-src-mobile: url('../../public/images/hero/vowel-school-arrival-1280.jpg');
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div>
+            <p class="hero-place">Nellore, Andhra Pradesh</p>
+            <h1>Powered by intellect.<br />Driven by values.</h1>
+            <p class="hero-lede">
+              Rational learning through interaction, understanding and doing — across the
+              schools and colleges of the Vowel Learning Initiations group.
+            </p>
+            <div class="hero-actions">
+              <span class="action action-primary action-md"><span>Explore our schools</span></span>
+              <span class="action action-ghost action-md"><span>Admission requirements</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-facts">
+          <div class="hero-fact"><span>Established</span><strong>2011</strong></div>
+          <div class="hero-fact"><span>Region</span><strong>Nellore district</strong></div>
+          <div class="hero-fact"><span>Stages</span><strong>Nursery to Class X</strong></div>
+          <div class="hero-fact"><span>Boards</span><strong>CBSE &amp; State Board</strong></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
